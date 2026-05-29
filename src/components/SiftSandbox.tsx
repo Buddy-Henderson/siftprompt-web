@@ -210,7 +210,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="w-full h-80 lg:h-96 p-5 overflow-y-auto font-mono text-sm leading-relaxed text-zinc-400 bg-zinc-950/20 whitespace-pre-wrap selection:bg-zinc-800">
+            <div className="w-full px-0 md:px-6 lg:px-12">
               {optimizedText || <span className="text-zinc-700 italic">Waiting for text payload input variables...</span>}
             </div>
           </div>

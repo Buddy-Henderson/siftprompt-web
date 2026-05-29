@@ -69,19 +69,15 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
-      <body className="bg-[#09090b] text-zinc-100 antialiased">
-        {/* Render the Navbar globally across all pages */}
+      {/* Remove inline styles here, rely on the @apply in globals.css */}
+      <body>
         <Navbar />
-        
-        {/* This injects the individual page content directly underneath */}
-        {children}
+        <main className="w-full max-w-7xl mx-auto px-4 md:px-8">
+          {children}
+        </main>
       </body>
     </html>
   );
